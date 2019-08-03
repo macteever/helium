@@ -38,7 +38,7 @@
          <?php endif; ?>
          </div>
          <aside class="col-xl-3 col-lg-3 col-md-6 col-12">
-           <div class="d-flex flex-column tmplt-blog-category poppins uppercase fs-14 fw-300 text-center">
+           <div class="d-flex flex-column tmplt-blog-category gotham uppercase fs-14 fw-300 text-center">
              <h3 class="fs-15 fw-500 ls-3 uppercase mb-15">catégories</h3>
              <?php
              $terms = get_categories();
