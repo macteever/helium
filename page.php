@@ -2,10 +2,7 @@
 
 	<main role="main">
 		<!-- section -->
-		<section id="blog-top" class="container-fluid" style="background: -webkit-linear-gradient(321deg, rgba(71,71,71,0.58) 0%, rgba(71,71,71,0.58) 100%);
-		 background: -o-linear-gradient(rgba(71,71,71,0.58) 0%, rgba(71,71,71,0.58) 100%);
-		 background: linear-gradient(rgba(71,71,71,0.32) 0%, rgba(71,71,71,0.58) 100%),
-		 url(<?php the_field('blog_top_bkg', 'option'); ?>)">
+		<section class="pt-150">
 		 <div class="container h-100">
 			<div class="row align-items-end h-100">
 				<div class="col-auto mx-auto fs-18 blog-title ls-3">
