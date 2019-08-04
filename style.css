@@ -717,16 +717,15 @@ footer{
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-.footer-menu ul{
-	display: flex;
+.footer-logo{
+	max-width: 150px;
 }
-.footer-menu ul li{
-	list-style-type: none;
-	letter-spacing: 2px;
-	font-size: 13px;
+.footer-infos a{
+	color: #FFFFFF;
 }
-.footer-menu ul li a{
-	color: #FFF!important;
+.footer-social img{
+	max-height: 20px;
+	margin-right: 25px;
 }
 /* FORM */
 input{

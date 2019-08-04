@@ -2,17 +2,32 @@
 			<footer class="footer" role="contentinfo">
 				<div class="container-fluid" id="contact">
 					<div class="container">
-						<!-- <div class="row justify-content-between align-items-center footer-widgets mt-30 mb-30">
-							<!-- <div class="col-xl-4 col-lg-4 col-12 fs-13 text-white">
-									<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Widget Area 1', 'html5blank') )?>
-							</div> -->
-						</div>
-						<div class="row justify-content-center">
-							<nav class="footer-menu" role="navigation">
-								<div class="row h-100 align-items-center">
-									<?php wp_nav_menu( array( 'theme_location' => 'extra-menu' ) ); ?>
+						<div class="row justify-content-around pt-30 pb-30 footer-infos">
+							<div class="col-auto footer-logo">
+								<img src="<?=get_template_directory_uri().'/assets/img/logo-white.svg'?>" alt="Helium salle sport eléctro stimulation Pau">
+							</div>
+							<?php if( have_rows('footer_infos', 'option') ): ?>
+						    <?php while( have_rows('footer_infos', 'option') ): the_row(); ?>
+									<div class="col-auto">
+										<h3 class="uppercase text-white fs-17 fw-600">
+											<?php the_sub_field('title'); ?>
+										</h3>
+										<div class="fw-300 fs-15 text-white">
+											<?php the_sub_field('content'); ?>
+										</div>
+									</div>
+						    <?php endwhile; ?>
+							<?php endif; ?>
+							<div class="col-auto footer-social">
+								<h3 class="uppercase text-white fs-17 fw-600">
+									retrouvez-nous sur :
+								</h3>
+								<div class="d-flex mt-15">
+									<a href="<?php the_sub_field('footer_facebook', 'option'); ?>"><img src="<?=get_template_directory_uri().'/assets/img/facebook.svg'?>" alt="Helium salle sport eléctro stimulation Pau"></a>
+									<a href="<?php the_sub_field('footer_twitter', 'option'); ?>"><img src="<?=get_template_directory_uri().'/assets/img/twitter.svg'?>" alt="Helium salle sport eléctro stimulation Pau"></a>
+									<a href="<?php the_sub_field('footer_insta', 'option'); ?>"><img src="<?=get_template_directory_uri().'/assets/img/insta.svg'?>" alt="Helium salle sport eléctro stimulation Pau"></a>
 								</div>
-							</nav>
+							</div>
 						</div>
 					</div>
 				</div>
