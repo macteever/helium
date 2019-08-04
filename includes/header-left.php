@@ -2,7 +2,7 @@
   <div class="col-auto anim-300">
     <a href="<?php echo home_url(); ?>"><img class="m-l-auto m-r-auto" src="<?=get_template_directory_uri().'/assets/img/logo.svg'?>" alt="Helium salle sport eléctro stimulation Pau"></a>
   </div>
-    <div class="col-auto anim-300 large-menu anim-300">
+    <div class="ml-auto col-auto anim-300 large-menu anim-300">
       <nav class="d-flex">
          <?php  customTheme_nav(); ?>
          <div id="menu-btn">

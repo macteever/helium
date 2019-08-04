@@ -41,6 +41,7 @@ html {
 body {
 	color:#2C2C2B;
 	font-family: 'Gotham';
+	background-color: #EFEFEF!important;
 }
 h1{
 	margin-bottom: 30px;
@@ -408,6 +409,10 @@ header a{
 header img{
 	transform: translateY(-5px);
 }
+.header.nav-up {
+    top: -80px;
+		border-bottom: solid 1px #EAEAEA;
+}
 body.fixed header{
 	background-color: #F7F7F7;
 	border-bottom: solid 1px rgba(150,150,150,0.3);
@@ -531,14 +536,14 @@ margin-left: auto;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 30px 0em;
+	padding: 28px 0em;
 	margin-left: 25px;
 }
 .header-account{
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 30px 0em;
+	padding: 28px 0em;
 	display: flex;
   align-items: center;
 }
@@ -569,24 +574,7 @@ margin-left: auto;
 .site-branding span{
 	text
 }
-.after-wave-white::after{
-	content: url(assets/img/wave-white.svg);
-	display: block;
-	width: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 5px;
-	margin-bottom: 30px;
-}
-.after-wave-brown::after{
-	content: url(assets/img/wave-brown.svg);
-	display: block;
-	width: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 5px;
-	margin-bottom: 30px;
-}
+
 /* WOOCOMERCE STYTLESHEET */
 .woocommerce ul.products li.product .price {
     color: #77a464;
@@ -637,7 +625,7 @@ margin-left: auto;
 	background-image: linear-gradient(187deg, #42B9D3 0%, #02A9B1 100%);
 }
 .home-top-page .row{
-	min-height: calc(100vh - 15vh);
+	min-height: calc(100vh);
 }
 .home-top-logo{
 	width: 100%;
@@ -657,9 +645,67 @@ margin-left: auto;
 	z-index: 1;
 	max-width: 800px;
 }
-.home-present a, .home-fonction a, .home-studio a{
+.home-present a, .home-fonction a, .home-studio a, .home-offres a{
 	font-size: 20px;
 	font-weight: 600;
+}
+.home-present .col-content{
+	padding: 40px 60px;
+	transform: translateX(-30px);
+	box-shadow: 2px 3px 10px 2px rgba(0, 0, 0, 0.15)
+}
+.home-fonction .col-content{
+	padding: 80px;
+}
+.home-fonction .col-img{
+	padding-left: 0px;
+}
+.home-fonction .col-img img{
+	object-fit: cover;
+}
+.home-present img{
+	height: 650px;
+	object-fit: cover;
+}
+.home-studio .col-content{
+	padding-top: 50px;
+	padding-left: 50px;
+}
+.home-studio img{
+	height: 500px;
+	object-fit: cover;
+}
+.home-studio .col-content::before{
+	content: url(assets/img/coin-blue.svg);
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.home-present::before, .home-studio::before{
+	content: url(assets/img/Clouds-optim-inverse.png);
+	position: absolute;
+	display: block;
+	top: -30vh;
+	right: 0;
+}
+.home-fonction::before{
+	content: url(assets/img/Clouds-optim.png);
+	position: absolute;
+	display: block;
+	top: -30vh;
+	left: 0;
+	z-index: -1;
+}
+.before-goutte-white:before{
+	content: url(assets/img/goutte-white.svg);
+	display: block;
+	position: absolute;
+}
+.before-goutte-blue:before{
+	content: url(assets/img/goutte-blue.svg);
+	display: block;
+	position: absolute;
 }
 /* BLOG ARCHIVE */
 

@@ -43,19 +43,19 @@
          <img src="<?=get_template_directory_uri().'/assets/img/Clouds-optim-inverse.png'?>" alt="Helium salle sport eléctro stimulation Pau">
        </div>
      </section>
-     <section class="container-fluid mt-150">
+     <section class="container-fluid mt-150 p-relative">
        <div class="container">
        <?php if ( have_rows('home_present') ): ?>
            <?php while ( have_rows('home_present') ) : the_row(); ?>
-           <div class="row mb-100 align-items-center home-present">
-             <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+           <div class="row mb-150 align-items-center home-present">
+             <div class="col-xl-5 col-lg-5 col-md-6 col-12">
                <?php
                $image = get_sub_field('img');
                if ( !empty($image) ): ?>
                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                <?php endif; ?>
              </div>
-             <div class="col-xl-6 col-lg-6 col-md-6 col-12 bkg-or p-5">
+             <div class="col-xl-7 col-lg-7 col-md-6 col-12 bkg-or col-content">
                <h2 class="text-white fs-52 mb-50"><?php the_sub_field('title'); ?></h2>
                <div class="text-white fs-17 lh-26">
                  <?php the_sub_field('content'); ?>
@@ -69,17 +69,21 @@
                    $link_url = $link['url'];
                    $link_title = $link['title'];
                    ?>
-                   <a class="button" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+                   <a class="button text-white before-goutte-white pl-30" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
                  <?php endif; ?>
                </div>
              </div>
            </div>
          <?php endwhile; ?>
        <?php endif; ?>
+       </div>
+     </section>
+     <section class="container-fluid p-relative">
+       <div class="container">
        <?php if ( have_rows('home_fonction') ): ?>
            <?php while ( have_rows('home_fonction') ) : the_row(); ?>
              <div class="row mb-100 home-fonction">
-               <div class="col-xl-6 col-12 bkg-vert p-5">
+               <div class="col-xl-6 col-12 col-content bkg-vert">
                  <h2 class="text-white fs-52 mb-50"><?php the_sub_field('title'); ?></h2>
                  <div class="text-white fs-17 lh-26">
                    <?php the_sub_field('content'); ?>
@@ -93,11 +97,11 @@
                      $link_url = $link['url'];
                      $link_title = $link['title'];
                      ?>
-                     <a class="button" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+                     <a class="text-white before-goutte-white pl-30" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
                    <?php endif; ?>
                  </div>
                </div>
-               <div class="col-xl-6 col-12">
+               <div class="col-xl-6 col-12 col-img d-flex">
                  <?php
                  $image = get_sub_field('img');
                  if ( !empty($image) ): ?>
@@ -108,12 +112,14 @@
            <?php endwhile; ?>
          <?php endif; ?>
        </div>
+     </section>
+     <section class="container-fluid p-relative">
        <div class="container home-studio-part">
          <?php if ( have_rows('home_studio') ): ?>
            <?php while ( have_rows('home_studio') ) : the_row(); ?>
-             <div class="row home-studio">
-                <div class="col-xl-7 col-lg-6 col-md-6 col-12 p-5">
-                  <h2 class="fs-52 mb-50"><?php the_sub_field('title'); ?></h2>
+             <div class="row home-studio align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-content ml-auto">
+                  <h2 class="fs-52 mb-50 text-blue"><?php the_sub_field('title'); ?></h2>
                   <div class="fs-17 lh-26">
                     <?php the_sub_field('content'); ?>
                   </div>
@@ -126,7 +132,7 @@
                       $link_url = $link['url'];
                       $link_title = $link['title'];
                       ?>
-                      <a class="button" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+                      <a class="text-blue before-goutte-blue pl-30" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
                     <?php endif; ?>
                   </div>
                 </div>
@@ -140,10 +146,14 @@
              </div>
            <?php endwhile; ?>
          <?php endif; ?>
+       </div>
+     </section>
+     <section class="container-fluid p-relative">
+       <div class="container">
          <?php if ( have_rows('home_offres') ): ?>
            <?php while ( have_rows('home_offres') ) : the_row(); ?>
-             <div class="row mt-120 home-offres">
-                <div class="col-xl-5 col-lg-6 col-md-6 col-12">
+             <div class="row mt-120 mb-120 home-offres justify-content-around align-items-center">
+                <div class="col-xl-3 col-lg-5 col-md-6 col-12">
                   <a href="#">
                     <?php
                     $image = get_sub_field('img');
@@ -153,7 +163,7 @@
                   </a>
                 </div>
                 <div class="col-xl-7 col-lg-6 col-md-6 col-12 p-5">
-                  <h2 class="fs-52 mb-50"><?php the_sub_field('title'); ?></h2>
+                  <h2 class="fs-52 mb-50 text-blue"><?php the_sub_field('title'); ?></h2>
                   <div class="fs-17 lh-26">
                     <?php the_sub_field('content'); ?>
                   </div>
@@ -166,7 +176,7 @@
                       $link_url = $link['url'];
                       $link_title = $link['title'];
                       ?>
-                      <a class="button" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+                      <a class="text-blue before-goutte-blue pl-30" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
                     <?php endif; ?>
                   </div>
                 </div>
