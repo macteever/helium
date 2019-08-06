@@ -717,9 +717,13 @@ margin-left: auto;
 #blog-top .footer-social img{
 	height: 20px;
 }
-/* #blog-top article{
-box-shadow: 5px 4px 20px 0 rgba(0,0,0,0.05);
-} */
+.index-post-forward img{
+	object-fit: cover!important;
+	height: auto!important;
+}
+.index-post-forward .index-content{
+	margin-left: -15px;
+}
 #blog-top article img{
 	height: 300px;
 	width: 100%;
@@ -728,6 +732,19 @@ box-shadow: 5px 4px 20px 0 rgba(0,0,0,0.05);
 #blog-top article .index-content{
 	padding: 50px 30px;
 	min-height: 350px;
+}
+#blog-top article:hover{
+	transform: scale(1.008);
+	box-shadow: 0 2px 15px 0 rgba(186,186,186,0.50);
+}
+.index-read-more{
+	position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+.index-read-more img{
+	width: 20px!important;
+	height: 20px!important;
 }
 /* SINGLE BLOG */
 

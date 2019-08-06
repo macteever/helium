@@ -20,30 +20,66 @@
         </div>
       </div>
       <div class="row anim-300 mb-150">
-        <?php if (have_posts()):
+        <?php
+					$compt = 0;
+          if (have_posts()):
           while (have_posts()) : the_post(); ?>
-    				<article class="col-xl-6 col-lg-6 col-md-12 col-12">
-    					<a class="d-block anim-300 text-white" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-    						<img class="anim-300 index-thumbnail" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');" />
-                <div class="bkg-blue index-content">
-                  <div class="fs-15 text-center mb-15">
-                    <!-- <?php $category_detail=get_the_category();//$post->ID
-                    foreach($category_detail as $cd){
-                      echo $cd->cat_name;
-                    }
-                    ?> -->
-                    <span class="fs-15 fw-700"><?php the_date(); ?></span>
+           <?php if (($compt < 1)) { ?>
+             <!-- <a class="anim-300 text-white" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> -->
+				       <article class="index-post-forward mb-100 anim-300">
+                  <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-6 col-12 d-flex">
+                      <img class="anim-300 index-thumbnail" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');" />
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-6 col-12 bkg-or index-content">
+                      <div class="fs-15 text-center mb-15">
+                        <!-- <?php $category_detail=get_the_category();//$post->ID
+                        foreach($category_detail as $cd){
+                        echo $cd->cat_name;
+                        }
+                        ?> -->
+                        <span class="fs-15 fw-700 text-white"><?php the_date(); ?></span>
+                      </div>
+                      <h3 class="fs-36 roboto-slab fw-700 text-white text-center"><?php the_title(); ?></h3>
+                      <div class="roboto fs-17 fw-300 mt-15 lh-24 text-white">
+                        <?php echo excerpt(20); ?>
+                      </div>
+                      <div class="mt-20 text-right text-white index-read-more d-flex justify-content-end align-ietms-center">
+                        <img src="<?=get_template_directory_uri().'/assets/img/cta-plus.svg'?>" alt="Helium salle sport eléctro stimulation Pau"><a class="fs-17 fw-600 text-white ml-15" href="<?php the_permalink(); ?>">Lire la suite</a>
+                      </div>
+                    </div>
                   </div>
-                  <h3 class="fs-36 roboto-slab fw-700"><?php the_title(); ?></h3>
-                  <div class="roboto fs-17 fw-300 mt-15 lh-24">
-                    <?php echo excerpt(20); ?>
-                  </div>
-                  <div class="mt-20 text-right">
-                    <a class="fs-17 fw-600 text-white" href="<?php the_permalink(); ?>">Lire la suite</a>
-                  </div>
-                </div>
-             </a>
-           </article>
+               </article>
+             <!-- </a> -->
+           <?php } elseif (($compt > 0 )) { ?>
+
+               <div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-100">
+                 <article class="anim-300">
+                   <a class="d-block anim-300 text-white" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                     <img class="anim-300 index-thumbnail" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');" />
+                     <div class="bkg-blue index-content">
+                       <div class="fs-15 text-center mb-15">
+                         <!-- <?php $category_detail=get_the_category();//$post->ID
+                         foreach($category_detail as $cd){
+                         echo $cd->cat_name;
+                       }
+                       ?> -->
+                       <span class="fs-15 fw-700"><?php the_date(); ?></span>
+                     </div>
+                     <h3 class="fs-36 roboto-slab fw-700 text-center"><?php the_title(); ?></h3>
+                     <div class="roboto fs-17 fw-300 mt-15 lh-24">
+                       <?php echo excerpt(20); ?>
+                     </div>
+                     <div class="mt-20 text-right index-read-more d-flex justify-content-end align-items-center">
+                       <img src="<?=get_template_directory_uri().'/assets/img/cta-plus.svg'?>" alt="Helium salle sport eléctro stimulation Pau"><a class="fs-17 fw-600 text-white ml-15" href="<?php the_permalink(); ?>">Lire la suite</a>
+                     </div>
+                   </div>
+                 </a>
+               </article>
+              </div>
+
+            <?php } ?>
+           <?php $compt++; ?>
 			    <?php endwhile; ?>
   			<?php endif; ?>
       </div>
