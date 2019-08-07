@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="row anim-300 mb-150">
+      <div class="row anim-300 pb-150">
         <?php
 					$compt = 0;
           if (have_posts()):

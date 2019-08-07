@@ -52,19 +52,20 @@ function initMap() {
 
 				  // Create a map object and specify the DOM element for display.
 				  var map = new google.maps.Map(document.getElementById('map'), {
-				    center: {lat: 44.8416139, lng: -0.5797607},
+				    center: {lat: 43.305421, lng: -0.340573},
 				    scrollwheel: false,
 				    // Apply the map style array to the map.
 				    styles: styleArray,
 				    zoom: 15
 				  });
+					43.305421
 
-				  var myLatLng = {lat: 44.8416139, lng: -0.5797607};
+				  var myLatLng = {lat: 43.305421, lng: -0.340573};
 
 				  var marker = new google.maps.Marker({
 				    map: map,
 				    position: myLatLng,
-						 icon :'../wp-content/themes/helium/assets/img/mapmarker.png'
+						 icon :'../wp-content/themes/helium/assets/img/goutte-blue.svg'
 				  });
 
 
