@@ -3,12 +3,12 @@
 				<div class="container-fluid" id="contact">
 					<div class="container">
 						<div class="row justify-content-around pt-30 pb-30 footer-infos">
-							<div class="col-auto footer-logo">
+							<div class="col-xl-auto col-lg-auto col-12 footer-logo">
 								<img src="<?=get_template_directory_uri().'/assets/img/logo-white.svg'?>" alt="Helium salle sport eléctro stimulation Pau">
 							</div>
 							<?php if( have_rows('footer_infos', 'option') ): ?>
 						    <?php while( have_rows('footer_infos', 'option') ): the_row(); ?>
-									<div class="col-auto">
+									<div class="col-xl-auto col-lg-auto col-12 footer-content">
 										<h3 class="uppercase text-white fs-17 fw-600">
 											<?php the_sub_field('title'); ?>
 										</h3>

@@ -5,18 +5,18 @@
     <div class="ml-auto col-auto anim-300 large-menu anim-300">
       <nav class="d-flex">
          <?php  customTheme_nav(); ?>
-         <div id="menu-btn">
-            <button>
-               <span></span>
-               <span></span>
-               <span></span>
-            </button>
-            <!-- <span class="ml-10 gotham fs-13 ">MENU</span> -->
-         </div>
       </nav>
         <!-- /nav -->
     </div>
-    <div class="col-auto ml-auto">
+    <div class="col-auto ml-auto d-flex align-items-center">
         <a class="header-account" href="<?php echo get_site_url() . '/mon-compte'; ?>"><i class="material-icons mr-10">account_circle</i>Mon compte</a>
+        <div id="menu-btn" class="ml-15">
+           <button>
+              <span></span>
+              <span></span>
+              <span></span>
+           </button>
+           <!-- <span class="ml-10 gotham fs-13 ">MENU</span> -->
+        </div>
     </div>
 </div>

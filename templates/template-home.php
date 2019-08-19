@@ -10,7 +10,7 @@
              <?php while ( have_rows('top_page') ) : the_row(); ?>
 
                <div class="row justify-content-around">
-                 <div class="col-xl-4 col-lg-5 col-md-6 col-12 d-flex flex-column mt-80">
+                 <div class="col-xl-4 col-lg-5 col-md-6 col-12 d-flex flex-column mt-80 home-top-left">
                    <h1 class="text-white uppercase fs-22 fw-600 text-center"><?php the_sub_field('title'); ?></h1>
                    <?php
                    $image = get_sub_field('logo');
@@ -28,7 +28,7 @@
                    <?php endif; ?>
                    </div>
                  </div>
-                 <div class="col-xl-7 col-lg-7 col-md-6 col-12 p-relative">
+                 <div class="col-xl-7 col-lg-7 col-md-6 col-12 p-relative home-top-anim">
                    <?php
                    $image = get_sub_field('img');
                    if ( !empty($image) ): ?>
@@ -48,14 +48,14 @@
        <?php if ( have_rows('home_present') ): ?>
            <?php while ( have_rows('home_present') ) : the_row(); ?>
            <div class="row mb-150 align-items-center home-present">
-             <div class="col-xl-5 col-lg-5 col-md-6 col-12">
+             <div class="col-xl-5 col-lg-5 col-12">
                <?php
                $image = get_sub_field('img');
                if ( !empty($image) ): ?>
                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                <?php endif; ?>
              </div>
-             <div class="col-xl-7 col-lg-7 col-md-6 col-12 bkg-or col-content">
+             <div class="col-xl-7 col-lg-7 col-12 bkg-or col-content">
                <h2 class="text-white fs-52 mb-50"><?php the_sub_field('title'); ?></h2>
                <div class="text-white fs-17 lh-26">
                  <?php the_sub_field('content'); ?>
@@ -118,7 +118,7 @@
          <?php if ( have_rows('home_studio') ): ?>
            <?php while ( have_rows('home_studio') ) : the_row(); ?>
              <div class="row home-studio align-items-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-content ml-auto">
+                <div class="col-xl-6 col-lg-6 col-12 col-content ml-auto">
                   <h2 class="fs-52 mb-50 text-blue"><?php the_sub_field('title'); ?></h2>
                   <div class="fs-17 lh-26">
                     <?php the_sub_field('content'); ?>
@@ -136,7 +136,7 @@
                     <?php endif; ?>
                   </div>
                 </div>
-                <div class="col-xl-5 col-lg-6 col-md-6 col-12">
+                <div class="col-xl-5 col-lg-6 col-12">
                   <?php
                   $image = get_sub_field('img');
                   if ( !empty($image) ): ?>
@@ -153,7 +153,7 @@
          <?php if ( have_rows('home_offres') ): ?>
            <?php while ( have_rows('home_offres') ) : the_row(); ?>
              <div class="row mt-120 mb-120 home-offres justify-content-around align-items-center">
-                <div class="col-xl-3 col-lg-5 col-md-6 col-12">
+                <div class="col-xl-3 col-lg-5 col-12 text-center">
                   <a href="#">
                     <?php
                     $image = get_sub_field('img');
@@ -162,7 +162,7 @@
                     <?php endif; ?>
                   </a>
                 </div>
-                <div class="col-xl-7 col-lg-6 col-md-6 col-12 p-5">
+                <div class="col-xl-7 col-lg-6 col-12 p-5">
                   <h2 class="fs-52 mb-50 text-blue"><?php the_sub_field('title'); ?></h2>
                   <div class="fs-17 lh-26">
                     <?php the_sub_field('content'); ?>
