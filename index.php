@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="row mb-80">
-        <div class="col-auto footer-social">
+        <div class="col-xl-auto col-lg-auto col-12 index-social">
           <h3 class="text-grey fs-17 fw-400">
             Retrouvez-nous également sur les réseaux sociaux pour suivre Hélium au quotidien
           </h3>
@@ -28,10 +28,10 @@
              <!-- <a class="anim-300 text-white" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> -->
 				       <article class="index-post-forward mb-100 anim-300">
                   <div class="row">
-                    <div class="col-xl-7 col-lg-7 col-md-6 col-12 d-flex">
+                    <div class="col-xl-7 col-lg-7 col-12 d-flex">
                       <img class="anim-300 index-thumbnail" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');" />
                     </div>
-                    <div class="col-xl-5 col-lg-5 col-md-6 col-12 bkg-or index-content">
+                    <div class="col-xl-5 col-lg-5 col-12 bkg-or index-content">
                       <div class="fs-15 text-center mb-15">
                         <!-- <?php $category_detail=get_the_category();//$post->ID
                         foreach($category_detail as $cd){
@@ -41,7 +41,7 @@
                         <span class="fs-15 fw-700 text-white"><?php the_date(); ?></span>
                       </div>
                       <h3 class="fs-36 roboto-slab fw-700 text-white text-center"><?php the_title(); ?></h3>
-                      <div class="roboto fs-17 fw-300 mt-15 lh-24 text-white">
+                      <div class="roboto index-excerpt fs-17 fw-300 mt-15 lh-24 text-white">
                         <?php echo excerpt(20); ?>
                       </div>
                       <div class="mt-20 text-right text-white index-read-more d-flex justify-content-end align-ietms-center">
@@ -67,7 +67,7 @@
                        <span class="fs-15 fw-700"><?php the_date(); ?></span>
                      </div>
                      <h3 class="fs-36 roboto-slab fw-700 text-center"><?php the_title(); ?></h3>
-                     <div class="roboto fs-17 fw-300 mt-15 lh-24">
+                     <div class="roboto index-excerpt fs-17 fw-300 mt-15 lh-24">
                        <?php echo excerpt(20); ?>
                      </div>
                      <div class="mt-20 text-right index-read-more d-flex justify-content-end align-items-center">

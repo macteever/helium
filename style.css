@@ -732,8 +732,9 @@ margin-left: auto;
 	background-size: cover!important;
 	background-repeat: repeat-y!important;
 }
-#blog-top .footer-social img{
+#blog-top .index-social img{
 	height: 20px;
+	margin-right: 20px;
 }
 .index-post-forward img{
 	object-fit: cover!important;
@@ -935,6 +936,10 @@ font-family: 'Gotham';
 		height: auto;
 		margin-top: 50px;
 	}
+	/* INDEX */
+	.index-read-more{
+		bottom: 30px;
+	}
 	/* FOOTER */
 	.footer-logo{
 		margin-bottom: 30px;
@@ -988,6 +993,8 @@ font-family: 'Gotham';
 	.home-offres img{
 		width: 40%;
 	}
+	/* INDEX */
+
 }
 @media only screen and (max-width:420px) {
 	.menu-section{
@@ -1003,8 +1010,26 @@ font-family: 'Gotham';
 	.home-present .col-content, .home-fonction .col-content, .home-studio .col-content{
     padding: 40px 30px;
 	}
+	/*INDEX */
+	#blog-top h1{
+		font-size: 42px!important;
+	}
+	#blog-top article h3{
+		font-size: 26px!important;
+	}
+	#blog-top article img{
+		height: auto;
+	}
+	.index-excerpt{
+		margin-bottom: 40px;
+	}
+	#blog-top article .index-content{
+		min-height: inherit;
+	}
 	/* SINGLE */
-
+	.single h1{
+		font-size: 42px!important;
+	}
 	/*CONTACT*/
 	.contact-title h1{
 		font-size: 5vw!important;

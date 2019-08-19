@@ -9,14 +9,14 @@
 						<div class="col-12">
 							<h1 class="fs-52 text-blue mb-15 fw-700"><?php the_title(); ?></h1>
 							<div class="row justify-content-between align-items-center single-share-post">
-								<div class="col-auto d-flex ">
+								<div class="col-xl-auto col-lg-auto col-12 d-flex ">
 									<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share this post on Facebook!" onclick="window.open(this.href); return false;"><img src="<?=get_template_directory_uri().'/assets/img/facebook-blue.svg'?>" alt="Helium salle sport eléctro stimulation Pau"></a>
 									<a class="ml-15" target="_blank" href="https://plus.google.com/share?url=<?php the_permalink(); ?>"><img src="<?=get_template_directory_uri().'/assets/img/twitter-blue.svg'?>" alt="Helium salle sport eléctro stimulation Pau"></a>
 									<h3 class="text-grey uppercase fs-17 fw-600 ml-30">
 										Partager sur les réseaux sociaux
 									</h3>
 								</div>
-								<div class="col-auto">
+								<div class="col-xl-auto col-lg-auto col-12">
 									<span class="fs-15 fw-700 text-grey uppercase"><?php the_date(); ?></span>
 								</div>
 							</div>
