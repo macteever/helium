@@ -25,7 +25,7 @@ if ( $related_products ) : ?>
 
 		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
 
-		<?php woocommerce_product_loop_start(); ?>
+		<!-- <?php woocommerce_product_loop_start(); ?>
 
 			<?php foreach ( $related_products as $related_product ) : ?>
 
@@ -38,7 +38,7 @@ if ( $related_products ) : ?>
 
 			<?php endforeach; ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+		<?php woocommerce_product_loop_end(); ?> -->
 
 	</section>
 

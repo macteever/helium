@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="26px" viewBox="0 0 39 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="15-Pouce-Copy" transform="translate(-453.000000, -326.000000)">
+            <g id="Group-Copy" transform="translate(453.000000, 326.000000)">
+                <text id="Reserver" font-family="Gotham-Bold, Gotham" font-size="7" font-weight="bold" letter-spacing="0.0809246136" fill="#FFFFFF">
+                    <tspan x="0" y="6">RESERVER</tspan>
+                </text>
+                <polyline id="Path-3" stroke="#FFFFFF" stroke-width="3" transform="translate(20.029608, 20.014804) scale(1, -1) translate(-20.029608, -20.014804) " points="14 23.029608 20.029608 17 26.059216 23.029608"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
