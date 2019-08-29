@@ -811,6 +811,9 @@ button.wc-bookings-booking-form-button, .btn-reserver{
 \*------------------------------------*/
 
 /* HOME */
+.home-top-anim img{
+	top: -5px;
+}
 .home-main h2{
 	font-weight: 700;
 	font-size: 42px!important;
@@ -846,17 +849,19 @@ button.wc-bookings-booking-form-button, .btn-reserver{
 }
 .home-present .col-content{
 	padding: 40px 60px;
-	transform: translateX(-30px);
+	transform: translateX(-15px);
 	box-shadow: 2px 3px 10px 2px rgba(0, 0, 0, 0.15)
 }
 .home-fonction .col-content{
 	padding: 80px;
+  transform: translateX(-30px);
 }
 .home-fonction .col-img{
 	padding-left: 0px;
 }
 .home-fonction .col-img img{
 	object-fit: cover;
+	transform: translateX(30px);
 }
 .home-present img{
 	height: 650px;

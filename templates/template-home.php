@@ -43,6 +43,7 @@
          <img src="<?=get_template_directory_uri().'/assets/img/Clouds-optim-inverse.png'?>" alt="Helium salle sport eléctro stimulation Pau">
        </div>
      </section>
+     <div id="home-part1"></div>
      <section class="container-fluid mt-150 p-relative">
        <div class="container">
        <?php if ( have_rows('home_present') ): ?>
@@ -73,6 +74,7 @@
                  <?php endif; ?>
                </div>
              </div>
+             <div id="home-fonction"></div>
            </div>
          <?php endwhile; ?>
        <?php endif; ?>
@@ -113,6 +115,7 @@
          <?php endif; ?>
        </div>
      </section>
+     <div id="home-studio"></div>
      <section class="container-fluid p-relative">
        <div class="container home-studio-part">
          <?php if ( have_rows('home_studio') ): ?>
