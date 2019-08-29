@@ -33,20 +33,30 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'images',
 ) );
 ?>
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
-		<?php
-		if ( $product->get_image_id() ) {
-			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
-		} else {
-			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
-			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
-			$html .= '</div>';
-		}
 
-		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+<div class="col-xl-5 col-lg-5 col-md-6 col-12 product-content-left-parent">
+	<div class="p-relative product-content-left d-flex flex-column align-items-center justify-content-center">
 
-		do_action( 'woocommerce_product_thumbnails' );
-		?>
-	</figure>
+		<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+			<figure class="woocommerce-product-gallery__wrapper">
+				<?php
+				if ( $product->get_image_id() ) {
+					$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
+				} else {
+					$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
+					$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
+					$html .= '</div>';
+				}
+
+				echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+
+				do_action( 'woocommerce_product_thumbnails' );
+				?>
+			</figure>
+		</div>
+		<?php the_title( '<h1 class="product_title entry-title">', '</h1>' ); ?>
+		<div class="fs-28 fw-300 text-center lh-36 product-after-coin">
+			<?php the_content(); ?>
+		</div>
+	</div>
 </div>
