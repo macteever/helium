@@ -32,7 +32,6 @@ if ( post_password_required() ) {
 }
 ?>
 <div class="container-fluid single-shop-container">
-	<div class="container">
 		<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 			<?php
@@ -45,22 +44,33 @@ if ( post_password_required() ) {
 			do_action( 'woocommerce_before_single_product_summary' );
 			?>
 
-			<div class="summary entry-summary">
-				<?php
-				/**
-				* Hook: woocommerce_single_product_summary.
-				*
-				* @hooked woocommerce_template_single_title - 5
-				* @hooked woocommerce_template_single_rating - 10
-				* @hooked woocommerce_template_single_price - 10
-				* @hooked woocommerce_template_single_excerpt - 20
-				* @hooked woocommerce_template_single_add_to_cart - 30
-				* @hooked woocommerce_template_single_meta - 40
-				* @hooked woocommerce_template_single_sharing - 50
-				* @hooked WC_Structured_Data::generate_product_data() - 60
-				*/
-				do_action( 'woocommerce_single_product_summary' );
-				?>
+			<div class="p-relative summary entry-summary col-xl-7 col-lg-7 col-md-6 col-12 single-content-right" style="background-color: <?php the_field('couleur_bkg'); ?>">
+				<div class="single-content-right-child">
+					<div class="product_title p-relative">
+						<?php the_field('content_produit'); ?>
+					</div>
+					<div class="product_experience text-center text-white mt-30">
+						<?php the_field('exp_produit'); ?>
+					</div>
+					<div class="single-conditions fs-12 p-absolute">
+						<?php the_field('conditions_produit'); ?>
+					</div>
+					<?php
+					/**
+					* Hook: woocommerce_single_product_summary.
+					*
+					* @hooked woocommerce_template_single_title - 5
+					* @hooked woocommerce_template_single_rating - 10
+					* @hooked woocommerce_template_single_price - 10
+					* @hooked woocommerce_template_single_excerpt - 20
+					* @hooked woocommerce_template_single_add_to_cart - 30
+					* @hooked woocommerce_template_single_meta - 40
+					* @hooked woocommerce_template_single_sharing - 50
+					* @hooked WC_Structured_Data::generate_product_data() - 60
+					*/
+					do_action( 'woocommerce_single_product_summary' );
+					?>
+				</div>
 			</div>
 
 			<?php
@@ -76,6 +86,5 @@ if ( post_password_required() ) {
 			?>
 		</div>
 
-		<?php do_action( 'woocommerce_after_single_product' ); ?>
-	</div>
+		<?php // do_action( 'woocommerce_after_single_product' ); ?>
 </div>

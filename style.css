@@ -127,7 +127,7 @@ strong{
 }
 
 
-.p-relative{position: relative;}
+.p-relative{position: relative!important;}
 .p-absolute{position: absolute;}
 
  .fs-8{font-size: 8px;}
@@ -661,8 +661,138 @@ margin-left: auto;
 }
 /* SINGLE PRODUCT */
 .single-shop-container{
-	padding: 10vh 0 5vh;
-	min-height: 80vh;
+
+}
+.single-shop-container .product-content-left{
+	max-width: 420px;
+	margin-left: auto;
+	margin-right: 80px;
+}
+.single-content-right{
+
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.single-content-right-child{
+	max-width: 480px;
+  margin-right: auto;
+  min-height: 100vh;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.single-product .product{
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+  margin-left: -15px;
+	align-items: center;
+}
+.single-product .woocommerce-tabs{
+	display: none;
+}
+.woocommerce div.product div.summary{
+	margin-bottom: 0px;
+}
+.single-product .product_title{
+	font-family: 'nerisblack';
+  position: absolute;
+  font-size: 32px!important;
+  color: #FFF;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+}
+button.wc-bookings-booking-form-button, .btn-reserver{
+	font-size: 20px!important;
+	font-weight: 700!important;
+	color: #FFFFFF!important;
+	background-color: #005489!important;
+	padding: 10px 40px!important;
+	width: auto;
+  height: auto;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  float: none!important;
+  display: block!important;
+}
+.single-product .product_meta{
+	display: none;
+}
+.product-content-left-parent{
+	background-image: url(assets/img/cloud-bkg.jpg);
+	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.product-after-coin p{
+	position: relative;
+}
+.product-after-coin p::after{
+	content: url(assets/img/coin-shape.svg);
+	position: absolute;
+	left: -30px;
+	top: -30px;
+}
+.product-after-coin p::before{
+	content: url(assets/img/coin-shape.svg);
+	position: absolute;
+	right: -30px;
+	bottom: -30px;
+	transform: rotate(180deg);
+}
+/* FORM BOOKING */
+.wc-bookings-date-picker-timezone-block{
+	display: none;
+}
+.wc-bookings-date-picker .ui-datepicker-header{
+	background-color: #005489!important;
+	background-image: none;
+	border: none;
+	font-size: 15px;
+}
+.wc-bookings-booking-form, .wc-bookings-booking-form fieldset{
+	border: none;
+}
+.wc-bookings-booking-form .block-picker li{
+	color: #FFFFFF;
+	font-size: 15px;
+	text-align: center;
+}
+.wc-bookings-booking-form .wc-bookings-booking-cost{
+	color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+}
+.single-product .product_title p{
+	font-family: 'Gotham';
+	font-weight: 300;
+	font-size: 24px;
+}
+.single-conditions{
+	bottom: 0px;
+  right: 20px;
+  text-align: right;
+  font-weight: 300;
+  color: #FFFFFF;
+  max-width: 600px;
+  line-height: 16px;
+}
+.product_experience h3{
+	font-family: 'nerisblack';
+  font-size: 32px!important;
+}
+.product_experience p{
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 30px;
 }
 .bkg-blue{
 	background-color: #02548A;
@@ -672,6 +802,9 @@ margin-left: auto;
 }
 .bkg-vert{
 	background-color: #029A97;
+}
+.related.products {
+  display: none;
 }
 /*------------------------------------*\
     PAGES
