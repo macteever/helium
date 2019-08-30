@@ -13,7 +13,7 @@
 			 	var anim1 = TweenMax.to(".home-top-anim img", 1, {opacity : 0.15, y: -250, ease:Power1.easeInOut});
 				var anim2 = TweenMax.to(".home-top-cloud-left", 1, {opacity: 0.15, x: 150, ease:Power1.easeInOut});
 				var anim3 = TweenMax.to(".home-top-cloud-right", 1, {opacity: 0.15, x: -150, ease:Power1.easeInOut});
-				var anim4 = TweenMax.to(".home-present .col-content", 1, {y: -100, ease:Power1.easeInOut});
+				//var anim4 = TweenMax.to(".home-present .col-content", 1, {y: -100, ease:Power1.easeInOut});
 				var anim5 = TweenMax.to(".home-studio img", 1, {y: 50, ease:Power1.easeInOut});
 				var anim6 = TweenMax.to(".home-studio .col-content", 1, {x: -80, ease:Power1.easeInOut});
 				var anim8 = TweenMax.to(".home-fonction .col-content", 1, {x: 0, ease:Power1.easeInOut});
@@ -30,7 +30,7 @@
 
 				 // Create a scene for each project
 			   .setTween(anim1) // trigger a TweenMax.to tween
-			 	 .addIndicators({name: "dancer"}) // add indicators (requires plugin)
+			 	 // .addIndicators({name: "dancer"}) // add indicators (requires plugin)
 			   .addTo(controller);
 
 
@@ -44,7 +44,7 @@
 
 				// Create a scene for each project
 				.setTween(anim2) // trigger a TweenMax.to tween
-				.addIndicators({name: "cloud"}) // add indicators (requires plugin)
+				// .addIndicators({name: "cloud"}) // add indicators (requires plugin)
 				.addTo(controller);
 
 					// build scene
@@ -56,7 +56,7 @@
 
 				 // Create a scene for each project
 				 .setTween(anim3) // trigger a TweenMax.to tween
-				 .addIndicators({name: "cloud2"}) // add indicators (requires plugin)
+				 // .addIndicators({name: "cloud2"}) // add indicators (requires plugin)
 				 .addTo(controller);
 
 				 // build scene
@@ -68,7 +68,7 @@
 
 				// Create a scene for each project
 				.setTween(anim4) // trigger a TweenMax.to tween
-				.addIndicators({name: "img present"}) // add indicators (requires plugin)
+				// .addIndicators({name: "img present"}) // add indicators (requires plugin)
 				.addTo(controller);
 
 				// build scene
@@ -80,7 +80,7 @@
 
 			 // Create a scene for each project
 			 .setTween(anim5) // trigger a TweenMax.to tween
-			 .addIndicators({name: "img studio"}) // add indicators (requires plugin)
+			 // .addIndicators({name: "img studio"}) // add indicators (requires plugin)
 			 .addTo(controller);
 
 			 // build scene
@@ -92,7 +92,7 @@
 
 			// Create a scene for each project
 			.setTween(anim6) // trigger a TweenMax.to tween
-			.addIndicators({name: "studio content"}) // add indicators (requires plugin)
+			// .addIndicators({name: "studio content"}) // add indicators (requires plugin)
 			.addTo(controller);
 
 			// build scene
@@ -104,7 +104,7 @@
 
 		 // Create a scene for each project
 		 .setTween(anim8) // trigger a TweenMax.to tween
-		 .addIndicators({name: "fonction content"}) // add indicators (requires plugin)
+		 // .addIndicators({name: "fonction content"}) // add indicators (requires plugin)
 		 .addTo(controller);
 
 		 // build scene
@@ -116,7 +116,7 @@
 
 			// Create a scene for each project
 			.setTween(anim9) // trigger a TweenMax.to tween
-			.addIndicators({name: "fonction img"}) // add indicators (requires plugin)
+			// .addIndicators({name: "fonction img"}) // add indicators (requires plugin)
 			.addTo(controller);
 
 
